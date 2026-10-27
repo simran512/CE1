@@ -1,0 +1,248 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  background: #263b35;
+  color: white;
+  text-align: center;
+  padding: 18px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+header p {
+  margin: 0 0 15px;
+}
+
+nav, .footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav button, .footer-links button {
+  border: 1px solid #8ca49a;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 25px;
+  max-width: 1150px;
+  margin: 30px auto;
+  padding: 0 20px;
+  align-items: start;
+}
+
+.products-section {
+  min-width: 0;
+}
+
+.cart-section, .extra-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 0;
+}
+
+.extra-section {
+  grid-column: 1 / -1;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font: inherit;
+  min-width: 0;
+}
+
+#search {
+  flex: 1;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.product {
+  background: white;
+  padding: 18px;
+  border: 1px solid #dfe4e6;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin-top: 0;
+}
+
+.product p {
+  color: #555;
+}
+
+.product-actions {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  background: #39745e;
+  color: white;
+  padding: 9px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #285642;
+}
+
+.wishlist-button {
+  background: #687b72;
+}
+
+.cart-item, .order-item, .wishlist-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.quantity button {
+  padding: 4px 9px;
+  margin: 5px 3px 0 0;
+}
+
+.remove {
+  background: #c94b4b;
+}
+
+.remove:hover {
+  background: #a93636;
+}
+
+.coupon {
+  margin-top: 20px;
+}
+
+.coupon input {
+  width: 60%;
+}
+
+#coupon-message, .small-note {
+  font-size: 13px;
+  color: #555;
+}
+
+.totals {
+  border-top: 1px solid #ddd;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.totals p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout {
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+}
+
+#checkout-message {
+  color: #286b42;
+  font-size: 14px;
+}
+
+#search-message {
+  color: #555;
+  font-size: 14px;
+  min-height: 16px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.support-card {
+  background: #f4f6f8;
+  border-radius: 6px;
+  padding: 12px 18px;
+}
+
+#checkout-form label {
+  display: block;
+  margin: 14px 0;
+  font-weight: bold;
+}
+
+#checkout-form input,
+#checkout-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+}
+
+footer {
+  background: #263b35;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 35px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .extra-section {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls input,
+  .controls select {
+    width: 100%;
+  }
+}

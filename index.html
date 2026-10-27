@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singh Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Singh Store</h1>
+    <p>Your everyday online store</p>
+    <nav>
+      <button onclick="showSection('shop')">Shop</button>
+      <button onclick="showSection('wishlist-section')">Wishlist (<span id="wish-count">0</span>)</button>
+      <button onclick="showSection('orders-section')">View Orders</button>
+      <button onclick="showSection('support-section')">Customer Support</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="shop" class="products-section">
+      <h2>Products</h2>
+      <div class="controls">
+        <input id="search" placeholder="Search products...">
+        <select id="category">
+          <option value="All">All Categories</option>
+          <option value="Tech">Tech</option>
+          <option value="Home">Home</option>
+          <option value="Style">Style</option>
+        </select>
+        <select id="sort">
+          <option value="default">Sort By</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+      <p id="search-message"></p>
+      <div id="products" class="products"></div>
+    </section>
+
+    <aside class="cart-section">
+      <h2>Shopping Cart (<span id="cart-count">0</span>)</h2>
+      <div id="cart-items"></div>
+
+      <div class="coupon">
+        <input id="coupon" placeholder="Coupon code">
+        <button id="apply-coupon">Apply</button>
+        <p id="coupon-message">Use SAVE10 for 10% off.</p>
+      </div>
+
+      <div class="totals">
+        <p>Subtotal: <span id="subtotal">₹0</span></p>
+        <p>Discount: <span id="discount">₹0</span></p>
+        <p><strong>Total: <span id="total">₹0</span></strong></p>
+      </div>
+
+      <button id="checkout" class="checkout">Checkout</button>
+      <p id="checkout-message"></p>
+    </aside>
+
+    <section id="wishlist-section" class="extra-section hidden">
+      <h2>My Wishlist</h2>
+      <div id="wishlist-products" class="products"></div>
+    </section>
+
+    <section id="orders-section" class="extra-section hidden">
+      <h2>My Orders</h2>
+      <div id="orders-list"></div>
+    </section>
+
+    <section id="support-section" class="extra-section hidden">
+      <h2>Customer Support</h2>
+      <p>How can we help you?</p>
+      <div class="support-card">
+        <p><strong>Email:</strong> support@singhstore.com</p>
+        <p><strong>Phone:</strong> +91 8899692622</p>
+        <p><strong>Working Hours:</strong> Monday–Saturday, 9 AM–6 PM</p>
+        <p>For help with orders or products, contact our support team.</p>
+      </div>
+    </section>
+
+    <section id="checkout-section" class="extra-section hidden">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label>Full Name
+          <input id="customer-name" required placeholder="Enter your name">
+        </label>
+        <label>Email Address
+          <input id="customer-email" type="email" required placeholder="Enter your email">
+        </label>
+        <label>Delivery Address
+          <textarea id="customer-address" required placeholder="Enter your address"></textarea>
+        </label>
+        <p><strong>Order Total: <span id="checkout-total">₹0</span></strong></p>
+        <button type="submit" class="checkout">Place Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Singh Store</h2>
+    <p>Your trusted destination for everyday shopping.</p>
+    <div class="footer-links">
+      <button onclick="showSection('shop')">Shop</button>
+      <button onclick="showSection('support-section')">Contact Us</button>
+      <button onclick="showSection('orders-section')">View Orders</button>
+    </div>
+    <h3>About Us</h3>
+    <p>Singh Store aims to make everyday shopping simple and convenient.</p>
+    <p>Singh Store Private Limited</p>
+    <p>Email: support@singhstore.com</p>
+    <p>© 2026 Singh Store. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
